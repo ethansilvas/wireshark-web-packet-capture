@@ -52,3 +52,19 @@ Looking through the results I find a TLSv1.3 protocol (the TLS handshake that HT
 
 ## Part 2 - Packet Capture HTTP Traffic
 
+Now that I have verified that I can capture HTTPS traffic successfully, I will packet capture HTTP traffic as well. 
+
+First I start a new packet capture, then navigate to `http://cygwin.com` to generate HTTP traffic. 
+
+![](Images/Pasted%20image%2020230728161549.png)
+
+Then to search for the traffic I generated I apply the display filter `tcp.port == 80 && http contains "cygwin"`:
+
+![](Images/Pasted%20image%2020230728161705.png)
+
+I can verify that this is the correct traffic by looking at the first GET packet's HTTP data: 
+
+![](Images/Pasted%20image%2020230728161828.png)
+
+## Part 3 - Detect Web Page IP Address Using Display Filters
+
