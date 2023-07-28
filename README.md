@@ -68,3 +68,18 @@ I can verify that this is the correct traffic by looking at the first GET packet
 
 ## Part 3 - Detect Web Page IP Address Using Display Filters
 
+In this section I want to see the IP addresses of HTTPS traffic generated during a capture. 
+
+First, I will initiate a new packet capture and generate traffic by going to google.com. 
+
+Next, I will stop the packet capture and use the display filter to search for HTTPS traffic and view all of the initial TLS handshakes with `tcp.port == 443 && tls.handshake.type == 1`.
+
+![](Images/Pasted%20image%2020230728163341.png)
+
+In this example the destination IP address for google.com is 142.251.16.105. With this info I can use different display filters to view different packets: 
+	- `ip.addr == 142.251.16.105` to view all packets related to the IP address
+	- `ip.src == 142.251.16.105` to view all packets from the IP address
+	- `ip.dst == 142.251.16.105` to view all packets going to the IP address
+
+![](Images/Pasted%20image%2020230728163943.png)
+
