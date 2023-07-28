@@ -24,3 +24,17 @@ This command can be broken down like so:
 
 The current user, **rhyme**, now has packet capture capabilities with Wireshark. 
 
+## Task 2 - Start Packet Captures on an Ethernet Port
+
+For this system, there are 5 wired network interfaces that I can view and the ethernet port is listed as **ens5**:
+
+![](Images/Pasted%20image%2020230728152328.png)
+
+I initiate a quick packet capture on **ens5** to verify functionality and save the results to file:  
+
+![](Images/Pasted%20image%2020230728153230.png)
+
+## Task 3 - Use Display Filters to Detect HTTPS Packets
+
+
+
