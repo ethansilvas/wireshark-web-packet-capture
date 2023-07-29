@@ -83,3 +83,13 @@ In this example the destination IP address for google.com is 142.251.16.105. Wit
 
 ![](Images/Pasted%20image%2020230728163943.png)
 
+## Part 4 - Find All HTTPS Traffic Excluding an IP Address
+
+For this section, I want to view all HTTPS traffic that does not include traffic from a specific IP address to avoid clutter. 
+
+I start by creating a new packet capture and generating HTTPS traffic to google.com and duckduckgo.com.  
+
+I want to filter out all traffic from google.com's IP address 142.251.16.106. To do this I use a display filter that looks for all web traffic (HTTP and HTTPS) except for when the source or destination IP address is 142.251.16.106 with `!(ip.addr == 142.251.16.106) and (tcp.port == 443 or tcp.port == 80)`. 
+
+![](Images/Pasted%20image%2020230728171334.png)
+
