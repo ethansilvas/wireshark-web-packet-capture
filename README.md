@@ -1,6 +1,6 @@
 # Wireshark Web Packet Capture
 
-Setup Wireshark on a Linux machine and complete packet captures on an ethernet port for HTTP/HTTPS network traffic
+In this project I setup Wireshark on an Ubuntu Linux machine, perform packet captures on an ethernet port, and use Wireshark display filters to view HTTP and HTTPS traffic from specific IP addresses. 
 
 ## Part 1 - Setup Wireshark and Packet Capture HTTPS Traffic
 
@@ -93,3 +93,12 @@ I want to filter out all traffic from google.com's IP address 142.251.16.106. To
 
 ![](Images/Pasted%20image%2020230728171334.png)
 
+## Summary 
+
+In this project I used Wireshark to complete various packet captures on an ethernet port filtered the packets using display filters. Some of the objectives completed in this project are: 
+
+- Install Wireshark on an Ubuntu machine 
+- Add the current user to the wireshark group to be able to do packet captures
+- Complete and save packet captures on an ethernet port using Wireshark
+- Use display filters to filter for HTTP and HTTPS traffic
+- Use display filters to find and exclude all traffic from specific IP addresses
